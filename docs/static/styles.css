@@ -5,14 +5,14 @@ header {
     padding-top: 10%;
   }
 
-
+@media (min-width: 576px) {
 /* Navbar -> effet après survol */
 .lien-nav:hover {
     box-shadow: inset 200px 0px 0px 0px #3669f1;
     transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 
   }
-
+}
 
 /* Navbar Item -> effet après survol */
 #navbar-nav .lien-nav:hover {
@@ -69,7 +69,7 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
 /* Gestion du margin-top pour les écrans moyens (type tablette) */
 @media (min-width: 768px) and (max-width: 991.98px) {
 
-  .mt-md-1{
+  .margin-top-md-1{
     margin-top: 1em;
   }
   
@@ -79,15 +79,15 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
 /* Gestion du margin-top pour les écrans moyens (types smartphone) */
 @media (max-width: 575.98px) {
   
-    .mt-sm-2 {
+    .margin-top-sm-2 {
         margin-top: 2em;
     }
   
-    .mt-sm-1 {
+    .margin-top-sm-1 {
       margin-top: 1em;
   }
 
-  .mt-sm-6 {
+  .margin-top-sm-6 {
     margin-top: 6em;
   }
   

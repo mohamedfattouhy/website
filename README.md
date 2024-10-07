@@ -1,8 +1,5 @@
 <h1 align="center">
-  <span>
-    <img src="images/website-logo.png" alt="website-logo" style="vertical-align: top; padding-right: 25px">
     Personal Website
-  </span>
 </h1>
 
 

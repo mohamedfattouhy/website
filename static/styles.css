@@ -5,8 +5,9 @@ header {
     padding-top: 10%;
   }
 
-@media (min-width: 576px) {
-/* Navbar -> effet après survol */
+
+/* Navbar -> effet après survol (écran pc) */
+@media (min-width: 992px){
 .lien-nav:hover {
     box-shadow: inset 200px 0px 0px 0px #3669f1;
     transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;

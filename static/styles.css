@@ -149,14 +149,47 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
   }
 }
 
+@media (max-width: 575.98px) {
+  .col-10-custom-1{
+    text-align: left;
+    width: 83.33%;
+    padding: 0%;
+    padding-left: 10vw;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .col-10-custom-2{
+    text-align: left;
+    width: 83.33%;
+    padding: 0%;
+    padding-left: 6vw;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .col-10-custom-3{
+    text-align: left;
+    width: 83.33%;
+    padding: 0%;
+    padding-left: 2vw;
+  }
+}
 
 @media (max-width: 575.98px) {
   .col-8-custom-experiences{
     text-align: left;
     width: 66.67%;
     padding: 0%;
+    padding-left: 6vw;
+  }
+} 
+
+
+@media (min-width: 576px) {
+  .padding-left-custom{
+    padding-left: 2vw;
   }
 }
-
 
 

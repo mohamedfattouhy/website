@@ -7,7 +7,7 @@ header {
 
 
 /* Navbar -> effet après survol (écran pc) */
-@media (min-width: 1200px){
+@media (min-width: 1400px){
 .lien-nav:hover {
     box-shadow: inset 200px 0px 0px 0px #3669f1;
     transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
@@ -120,7 +120,7 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
 	color: white;
 	background: rgba(255,255,255,0.2);
 	padding: 1rem;
-	font-size: 4rem;
+	font-size: 4vw;
 	cursor: pointer;
 }
 
@@ -154,7 +154,7 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
     text-align: left;
     width: 83.33%;
     padding: 0%;
-    padding-left: 10vw;
+    padding-left: 14vw;
   }
 }
 
@@ -181,7 +181,7 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
     text-align: left;
     width: 66.67%;
     padding: 0%;
-    padding-left: 6vw;
+    padding-left: 10vw;
   }
 } 
 

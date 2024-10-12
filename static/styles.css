@@ -135,6 +135,7 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
 }
 
 
+/* Gestion de l'alignement du texte selon la taille de l'écran */
 @media (max-width: 575.98px) {
   .col-10-custom{
     text-align: left;
@@ -193,3 +194,15 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
 }
 
 
+/* Gestion de la position des icônes */
+@media (min-width: 576px) {
+  .custom-icon-position{
+    text-align: right;
+  }
+} 
+
+@media (max-width: 575.98px) {
+  .custom-icon-position-sm{
+    text-align: center;
+  }
+} 

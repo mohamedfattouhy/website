@@ -1,6 +1,6 @@
 <h1 align="center">
     <img src="static/website-site.svg" style="width: 80px;"/> <br>
-    <span style="padding-right: 20px; color: #5c83ed">Personal Website</span>
+    <span style="padding-right: 20px;">Personal Website</span>
 </h1>
 
 

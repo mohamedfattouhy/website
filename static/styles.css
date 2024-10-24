@@ -7,8 +7,8 @@ header {
 
 
 /* Style du pop-up */
-.popup {
-  display: none; /* Le pop-up est caché par défaut */
+/* .popup {
+  display: none; Le pop-up est caché par défaut
   position: fixed;
   top: 20%;
   left: 50%;
@@ -23,7 +23,7 @@ header {
 .popup button {
   right: 10px;
   position: absolute; 
-}
+} */
 
 /* Navbar -> effet après survol (écran pc) */
 @media (min-width: 1200px){
@@ -45,6 +45,26 @@ header {
     background-color: #4162be;
     border-color: #4e5d6c;
   }
+
+/* Progress Bar */
+#progress-bar {
+  width: 100%;
+  /* background: rgb(146, 172, 210); */
+  background: rgb(81, 102, 134); 
+  height: 5px;
+  position: absolute;
+  bottom: 0;
+  z-index: 20;
+  left: 0;
+}
+
+#progress {
+  display: inline-block;
+  background: white;
+  height: 5px; 
+  vertical-align: top;
+  transition: all 0.1s ease-in-out;
+}
 
 /* Styles des lignes horizontales */
 .hr-styles{
@@ -143,7 +163,7 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
     margin-top: 1em;
   }
   
-    .margin-top-sm-2 {
+  .margin-top-sm-2 {
         margin-top: 2em;
     }
 

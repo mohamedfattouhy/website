@@ -48,7 +48,7 @@ header {
 
 /* Progress Bar */
 #progress-bar {
-  width: 100%;
+  width: 100vw;
   /* background: rgb(146, 172, 210); */
   background: rgb(81, 102, 134); 
   height: 5px;

@@ -48,7 +48,7 @@ header {
 
 /* Progress Bar */
 #progress-bar {
-  width: 100vw;
+  width: 100%;
   /* background: rgb(146, 172, 210); */
   background: rgb(81, 102, 134); 
   height: 5px;
@@ -60,6 +60,7 @@ header {
 
 #progress {
   display: inline-block;
+  /* background: linear-gradient(90deg, rgb(96, 165, 230) 0%, rgb(5, 52, 96) 57%); */
   background: white;
   height: 5px; 
   vertical-align: top;
@@ -296,4 +297,48 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
   border-radius: 10px; 
   width: fit-content;
   margin: 0 auto; 
+}
+
+
+/* Style pour l'icône de navigation (smartphone) */
+.nav-icon-custom {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+} 
+
+.nav-icon-customRotate.active {
+  transform: rotate(45deg);
+}
+
+.nav-icon-customRotate180.active {
+  transform: rotate(180deg);
+}
+
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke:#a59cf7;
+  stroke-width: 7;
+  stroke-linecap:round;
+}
+
+.nav-icon-close-custom .top {
+  stroke-dasharray: 40 139;
+}
+
+.nav-icon-close-custom .bottom {
+  stroke-dasharray: 40 180;
+}
+
+.nav-icon-close-custom.active .top {
+  stroke-dashoffset: -98px;
+}
+
+.nav-icon-close-custom.active .bottom {
+  stroke-dashoffset: -138px;
 }

@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Gestion de la progression de la bar en fonction du scroll
+// Gestion de la progression de la barre en fonction du scroll
 const main = document.querySelector('main'),
   progressBar = document.querySelector('#progress');
 
@@ -97,12 +97,18 @@ document.addEventListener('scroll', () => {
   let totalHeight = Math.max(
         document.body.scrollHeight, document.documentElement.scrollHeight,
         document.body.offsetHeight, document.documentElement.offsetHeight,
-        document.body.clientHeight, document.documentElement.clientHeight
-      ),
-      clientHeight = document.documentElement.clientHeight,
-      userScroll = window.scrollY,
-      pctScrolled = Math.round((userScroll / (totalHeight-clientHeight))*100);
-  
+        document.body.clientHeight, document.documentElement.clientHeight,
+      );
+    //   clientHeight = document.documentElement.clientHeight,
+    //   userScroll = window.scrollY,
+    //   pctScrolled = Math.round((userScroll / (totalHeight-clientHeight))*1.05*100);
+
+    const clientHeight = window.innerHeight;
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      
+    const pctScrolled = Math.min(100, Math.round((scrollTop / (totalHeight - clientHeight)) * 100));
+      
+  // MAJ du width de la barre de progression
   progressBar.style.width = pctScrolled + '%';
 
 });

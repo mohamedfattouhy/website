@@ -396,7 +396,7 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
   transform: translate(-50%, -50%);
   z-index: 1000;
   border-radius: 35px;
-  /* display: none; Masque le popup par défaut */
+  display: none; /* Masque le popup par défaut */
 }
 
 .box {

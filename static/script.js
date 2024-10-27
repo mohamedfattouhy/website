@@ -11,6 +11,70 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Pop-up si le site est consulté sur mobile pour inciter à desactiver le mode sombre
+
+// localStorage.removeItem("darkMode");
+// sessionStorage.removeItem("darkMode");
+
+// Fonction pour vérifier si l'utilisateur est sur mobile
+function isMobileDevice() {
+    return /Mobi|Android|iPhone/i.test(navigator.userAgent);
+}
+
+// Affichage conditionnel du popup
+function showPopup() {
+
+    const popupDisplayed = sessionStorage.getItem("darkMode") === "true";
+    return !popupDisplayed;
+}
+
+// Fonction pour afficher le pop-up pour inviter a l'utilisateur a desactiver le mode sombre
+// window.matchMedia('(prefers-color-scheme: dark)').matches 
+function checkDarkMode() {
+    if (isMobileDevice() && showPopup()) {
+
+        // Evite d'afficher la popup plusieurs fois dans la même session
+        sessionStorage.setItem("darkMode", "true");
+
+        // Supprime l'effet de flou
+        document.querySelectorAll(".popup-blur").forEach(element => {
+            element.classList.add("blur-in");
+        });
+
+        document.querySelector('.popup').style.display = 'block';
+    }
+
+}
+
+// Vérification au chargement de la page
+document.addEventListener('DOMContentLoaded', function() {
+    checkDarkMode();}
+);
+
+function closePopup() {
+    
+    // Logique pour fermer le popup
+    const popup = document.getElementById('darkModePopup');
+
+    if (popup) {
+
+        // Masque le popup
+        popup.style.display = 'none';
+
+        // Supprime l'effet de flou
+        document.querySelectorAll(".popup-blur").forEach(element => {
+            element.classList.remove("blur-in");
+        });
+
+        document.querySelectorAll(".popup-blur").forEach(element => {
+            element.classList.add("blur-out");
+        });
+
+        
+    }
+  }
+
+
 // Cette fonction permet de cacher la flèche de défilement du carousel pour la première et dernière slide 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -54,40 +118,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-// Pop-up si le site est consulté sur mobile pour inciter à desactiver le mode sombre
-
-// Fonction pour vérifier si l'utilisateur est sur mobile
-function isMobileDevice() {
-    return /Mobi|Android/i.test(navigator.userAgent);
-}
-
-// Fonction pour afficher le pop-up si le mode sombre est activé
-function checkDarkMode() {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && isMobileDevice()) {
-        document.getElementById('darkModePopup').style.display = 'block';
-    }
-}
-
-// // Fonction pour fermer le pop-up
-// function closePopup() {
-//     document.getElementById('darkModePopup').style.display = 'none';
-// }
-
-function closePopup() {
-    // Logique pour fermer le popup
-    const popup = document.getElementById('darkModePopup'); // Assure-toi d'avoir un élément avec cet ID
-    if (popup) {
-      popup.style.display = 'none'; // Cache le popup
-    }
-  }
-
-// Vérification au chargement de la page
-document.addEventListener('DOMContentLoaded', function() {
-    checkDarkMode();
-});
-
-
 // Gestion de la progression de la barre en fonction du scroll
 const main = document.querySelector('main'),
   progressBar = document.querySelector('#progress');
@@ -99,6 +129,7 @@ document.addEventListener('scroll', () => {
         document.body.offsetHeight, document.documentElement.offsetHeight,
         document.body.clientHeight, document.documentElement.clientHeight,
       );
+
     //   clientHeight = document.documentElement.clientHeight,
     //   userScroll = window.scrollY,
     //   pctScrolled = Math.round((userScroll / (totalHeight-clientHeight))*1.05*100);

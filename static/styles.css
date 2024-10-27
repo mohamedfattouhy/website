@@ -8,7 +8,8 @@ header {
 
 /* Style du pop-up */
 /* .popup {
-  display: none; Le pop-up est caché par défaut
+  display: none; 
+  Le pop-up est caché par défaut
   position: fixed;
   top: 20%;
   left: 50%;
@@ -18,12 +19,13 @@ header {
   padding: 20px;
   border: 2px solid #000;
   z-index: 9999;
-}
+} */
 
-.popup button {
+/* .popup button {
   right: 10px;
   position: absolute; 
 } */
+
 
 /* Navbar -> effet après survol (écran pc) */
 @media (min-width: 1200px){
@@ -341,4 +343,92 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
 
 .nav-icon-close-custom.active .bottom {
   stroke-dashoffset: -138px;
+}
+
+
+/* Effet de flou si affichage de la popup */
+.blur-in {
+  animation: blur 1s forwards;
+}
+
+@keyframes blur {
+  from {
+      filter: blur(0px);
+  }
+
+  to {
+      filter: blur(3px); /* Applique un flou de 3px */
+  }
+}
+
+.blur-out {
+  animation: blur-out 1.5s forwards;
+}
+
+@keyframes blur-out {
+  from {
+      filter: blur(3px);
+  }
+
+  to {
+      filter: blur(0px);
+  }
+}
+
+/* Couche de fond assombrie derrière le popup */
+/* .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(161, 28, 28, 0.1); Couche semi-transparente */
+  /* z-index: 999; Sous le popup mais au-dessus du contenu */
+  /* display: block; Cache l'overlay par défaut */
+/* } */
+
+
+/* Style de la popup (smartphone) */
+.popup {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  border-radius: 35px;
+  /* display: none; Masque le popup par défaut */
+}
+
+.box {
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  /* margin-left: auto;
+  margin-right: auto; */
+  position: relative;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+  /* z-index: 1000; */
+}
+
+.close-button {
+  transition: all 0.5s ease;
+  position: absolute;
+  background-color: #FF9980;
+  padding: 2px 7px;
+  right: 0;
+  border-radius: 5px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.h5-popup {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  text-align: center;
+  padding-top: 1%;
+  padding-bottom: 1.5%;
+  color: #fff;
+  background-color: #FF704D;
 }

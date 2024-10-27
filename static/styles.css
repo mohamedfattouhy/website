@@ -350,7 +350,7 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
 .blur-in {
   animation: blur 1s forwards;
 }
-
+    
 @keyframes blur {
   from {
       filter: blur(0px);
@@ -362,7 +362,7 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
 }
 
 .blur-out {
-  animation: blur-out 1.5s forwards;
+  animation: blur-out 1s forwards;
 }
 
 @keyframes blur-out {
@@ -388,7 +388,9 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
 /* } */
 
 
-/* Style de la popup (smartphone) */
+/* Style de la popup (smartphone/tablette) */
+
+@media (max-width: 575.98px) {
 .popup {
   position: fixed;
   top: 30%;
@@ -398,6 +400,21 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
   border-radius: 35px;
   display: none; /* Masque le popup par défaut */
 }
+}
+
+@media (min-width: 576px) {
+  .popup {
+    position: fixed;
+    width: 70%;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    border-radius: 35px;
+    display: none; /* Masque le popup par défaut */
+  }
+}
+
 
 .box {
   border-radius: 5px;

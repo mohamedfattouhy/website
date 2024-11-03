@@ -42,6 +42,7 @@ function checkDarkMode() {
         });
 
         document.querySelector('.popup').style.display = 'block';
+
     }
 
 }
@@ -70,6 +71,8 @@ function closePopup() {
         document.querySelectorAll(".popup-blur").forEach(element => {
             element.classList.add("blur-out");
         });
+
+        location.reload();
     }
   }
 

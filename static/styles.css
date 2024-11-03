@@ -276,7 +276,7 @@ header {
 @media (max-width: 575.98px) {
 .popup {
   position: fixed;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
@@ -410,8 +410,6 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
   border: none;
 }
 
-
-
 /* Permet de faire en sorte que la variable "angle" varie dans l'animation */
 @property --angle{
   syntax: "<angle>";
@@ -431,7 +429,7 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
   transform: translate(-50%, -50%);
   z-index: -1;
   border-radius: 20px;
-  animation: 5s spin cubic-bezier(0.3, 0.4, 0.2, 1) forwards;
+  animation: 6s spin cubic-bezier(0.3, 0.4, 0.2, 1) forwards;
 }
 
 .card-header::before{
@@ -703,11 +701,7 @@ h1:before{
   color: white;
   animation: loading linear 7s;
 }
-@keyframes loading {
-  0% {
-      max-width: 0;
-  }
-}
+
 
 h2:before {
   content: attr(data-text);
@@ -717,14 +711,6 @@ h2:before {
   white-space: nowrap;
   color: white;
   animation: loading linear 7s;
-}
-@keyframes loading {
-  0% {
-    right: 100%;
-}
-100% {
-    right: -100%;
-}
 }
 
 h5:before {
@@ -736,14 +722,7 @@ h5:before {
   color: white;
   animation: loading linear 10s;
 }
-@keyframes loading {
-  0% {
-    right: 100%;
-}
-100% {
-    right: -100%;
-}
-}
+
 
 .remplissage:before {
   content: attr(data-text);
@@ -756,12 +735,12 @@ h5:before {
   /* font-size: 1.5rem; */
   /* font-style: italic; */
 }
+
 @keyframes loading {
   0% {
-      max-width: 0;
+      max-width: 0%;
   }
 }
-
 
 
 /* Effet pour les différentes sections de la page d'accueil */

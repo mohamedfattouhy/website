@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="static/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans+Narrow:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -41,6 +45,7 @@
             </div>
         </div>
 
+
     <!-- <nav class="border-bottom border-white border-2 fixed-top navbar navbar-expand-md navbar-dark bg-dark justify-content-center-resp"> -->
 
     <!-- <button class="navbar-toggler rounded-pill mb-2" id="navbar-toggler" style="box-shadow: rgba(0, 0, 0, 1) 0px 5px 8px;">
@@ -67,15 +72,15 @@
 
         <div class="mt-2 navbar-nav" id="navbar-nav">
 
-            <a href="index.html" class="rounded-pill ms-4 me-4 mb-2 nav-link lien-nav active" style="text-align: center; font-family: sans-serif; font-weight: bold;
-                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">À propos</a>
+            <a href="index.html" class="rounded-pill ms-4 me-4 mb-2 nav-link lien-nav active row justify-content-center" id="item1" style="text-align: center; font-weight: bold;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" data-text="À propos">À propos</a>
 
-            <a href="experiences.html" class="rounded-pill ms-4 me-4 mb-2 nav-link lien-nav" style="text-align: center; font-family: sans-serif; font-weight: bold;
-                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">Expériences</a>
+            <a href="experiences.html" class="rounded-pill ms-4 me-4 mb-2 nav-link lien-nav row justify-content-center" id="item2" style="text-align: center; font-weight: bold;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" data-text="Expériences">Expériences</a>
 
-            <a href="projets.html" class="rounded-pill ms-4 me-4 mb-2 nav-link lien-nav" style="text-align: center; font-family: sans-serif; font-weight: bold;
-                    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Projets</a>
-        </div>
+            <a href="projets.html" class="rounded-pill ms-4 me-4 mb-2 nav-link lien-nav row justify-content-center"
+             style="text-align: center; font-weight: bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" id="item3" data-text="Projets">Projets</a>
+
 
 
         <!-- Progress bar -->
@@ -83,71 +88,89 @@
             <span id="progress"></span>
         </div>
 
+
     </nav>
 
     <main class="mt-xxl-1 mt-xl-1 mt-lg-1 mt-md-5 margin-top-sm-6 popup-blur" style="min-height: 100vh;">
 
-
-        <header>
+        <!-- <header>
             <div>
                 <h1 style="font-family:'Times New Roman', Times, serif">Fattouhy Mohamed</h1>
                 <h2 style="font-family:'Times New Roman', Times, serif">Analyste de tests logiciels 💻</h2>
                 <div style="text-align: center; font-family:'Times New Roman', Times, serif"><p style="font-size: 1.5rem;"><em>Evreux, France</em> 📪</p></div>
             </div>
+        </header> -->
+
+        <header class="row justify-content-center effet-scroll-texte-1" style="padding-bottom: 4%;">
+            <div class="col-xxl-6 col-xl-5 col-lg-6 col-md-8 col-sm-11 col-11 card-header" style="border-radius: 20px;">
+                <h1 style="color: rgba(0, 0, 0, .3)" data-text="Fattouhy Mohamed" class="kanit-regular">Fattouhy Mohamed</h1>
+                <h2 style="color: rgba(0, 0, 0, .3);" data-text="Analyste de tests logiciels 💻" class="kanit-regular">Analyste de tests logiciels 💻</h2>
+                <h6 class="remplissage kanit-regular" style="text-align: center; color: rgba(0, 0, 0, .3); font-size: 1.5rem"
+                data-text="Evreux - France 📪">Evreux - France 📪</h6>
+            </div>
         </header>
 
 
-        <section class="row justify-content-center margin-top-sm-1" style="padding-bottom: 2.5%;">
+        <section class="row justify-content-center margin-top-sm-1 effet-scroll-texte-1" style="padding-bottom: 2.5%;">
             <hr class="col-10 hr-styles-2" style="height: 8px; width: 92%;">
         </section>
+
+        <div class="row justify-content-center" style="padding-bottom: 5%;">
+
+            <section style="position: relative; padding: 3%;"
+            class="col-xxl-8 col-xl-8 col-lg-10 col-md-10 col-sm-10 col-10 card-presentation">
+
+            <div class="margin-top-sm-2">
+                <div style="text-align: justify; font-size: large;">
+                    <p class="roboto-regular">
+                    Diplomé d'un Master en Statistiques et Sciences des Données – spécialité Mathématiques
+                    de l'Information et de la Décision - de la Faculté des Sciences de Montpellier, en 2022, 
+                    j'ai acquis des compétences sur <span style="color: rgba(180, 145, 246, 1)">l'analyse</span> 
+                    et la <span style="color: rgba(180, 145, 246, 1)">visualisation de données</span>,
+                    ainsi que sur <span style="color: rgba(180, 145, 246, 1)">l’apprentissage automatique</span>
+                    et <span style="color:  rgba(180, 145, 246, 1)">profond.</span>
+                    </p>
+                </div>
+            </div> 
+<!--         
+        <div class="row justify-content-center margin-top-sm-2 effet-scroll-texte-1">
+            <div style="text-align: justify; font-size: large;" class="col-xxl-8 col-xl-8 col-lg-10 col-md-10 col-sm-12 col-12 postcard dark blue">
+                <div class="roboto-regular" style="padding: 20px auto; margin: 20px auto;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!
+                </div>
+             </div>
+        </div>    -->
         
 
-        <section style="padding-bottom: 2.5%;">
-            <div class="row justify-content-center margin-top-sm-2">
-                <div style="display: flex; justify-content: center;" class="col-xxl-8 col-xl-8 col-lg-10 col-md-10 col-sm-12 col-12">
-                    <div style="text-align: justify; font-size: large; font-family:'Times New Roman', Times, serif">
-                        <p>Diplomé d'un Master en Statistiques et Sciences des Données – spécialité Mathématiques
-                    de l'Information et de la Décision - de la Faculté des Sciences de Montpellier, en 2022, 
-                    j'ai acquis des compétences sur <span style="color: rgba(180, 145, 246, 0.588)">l'analyse</span> 
-                    et la <span style="color: rgba(180, 145, 246, 0.588)">visualisation de données</span>,
-                    ainsi que sur <span style="color: rgba(180, 145, 246, 0.588)">l’apprentissage automatique</span>
-                    et <span style="color:  rgba(180, 145, 246, 0.588)">profond.</span>
+            <div class="margin-top-sm-1">
+                    <div style="text-align: justify; font-size: large;">
+                        <p class="roboto-regular">Au cours de mon parcours académique, j'ai acquis des connaissances en <span style="color: rgba(250, 107, 121, 1)">mathématiques</span>,
+                            <span style="color: rgba(250, 107, 121, 1)">statistiques</span>
+                            et <span style="color: rgba(250, 107, 121, 1)">modélisation de données</span>, ce qui me permet d'appréhender des problématiques complexes
+                            de l'analyse des données de manière rigoureuse et méthodique. 
                         </p>
                     </div>
-                </div>
-            </div>
-
-            <div class="row justify-content-center margin-top-sm-1">
-                <div style="display: flex; justify-content: center;" class="col">
-                    <div style="text-align: justify; font-size: large; font-family:'Times New Roman', Times, serif" class="col-xxl-8 col-xl-8 col-lg-10 col-md-10 col-sm-12 col-12">
-                        <p>Au cours de mon parcours académique, j'ai acquis des connaissances en <span style="color: rgba(250, 107, 121, 0.588)">mathématiques</span>,
-                            <span style="color: rgba(250, 107, 121, 0.588)">statistiques</span> et <span style="color: rgba(250, 107, 121, 0.588)">modélisation de données</span>, ce qui me permet d'appréhender des problématiques complexes
-                            de l'analyse des données de manière rigoureuse et méthodique. 
-                    </div>
-                </div>
             </div>
             
-            <div class="row justify-content-center margin-top-sm-1">
-                <div style="display: flex; justify-content: center;" class="col">
-                    <div style="text-align: justify; font-size: large; font-family:'Times New Roman', Times, serif" class="col-xxl-8 col-xl-8 col-lg-10 col-md-10 col-sm-12 col-12">
-                    J'ai également eu l'occasion de mettre en pratique mes connaissances lors d'une alternance dans le secteur de l'assurance,
+            <div class="margin-top-sm-1">
+                    <div style="text-align: justify; font-size: large;">
+                    <p class="roboto-regular">J'ai également eu l'occasion de mettre en pratique mes connaissances lors d'une alternance dans le secteur de l'assurance,
                     où j'ai pu travailler sur des projets de pré-traitement, de visualisation et d'analyse de données volumineuses.</p>
                     </div>
-                </div>
             </div>
 
             
-            <div class="row justify-content-center margin-top-sm-1">
-                <div style="display: flex; justify-content: center;" class="col">
-                    <div style="text-align: justify; font-size: large; font-family:'Times New Roman', Times, serif" class="col-xxl-8 col-xl-8 col-lg-10 col-md-10 col-sm-12 col-12">
-                        <p> Actuellement, je travaille en tant qu'<span style="font-weight: bold;">analyste de tests logiciels</span>  au sein de la CPAM de l'Eure.
+            <div class="margin-top-sm-1" >
+                    <div style="text-align: justify; font-size: large;">
+                        <p class="roboto-regular">Actuellement, je travaille en tant qu'<span style="font-weight: bold;">analyste de tests logiciels</span>  au sein de la CPAM de l'Eure.
                             Mon rôle consiste principalement à <span style="font-weight: bold;">valider les logiciels</span> utilisés dans l'organisation,
                             en m'assurant qu'ils répondent aux spécifications fonctionnelles et techniques, avant leur mise en production.</p>
                     </div>
-                </div>
             </div>
 
         </section>
+
+        </div>
 
         <!-- <section style="padding-bottom: 2.5%;">
             <div class="row justify-content-center margin-top-sm-2">
@@ -174,62 +197,93 @@
             </div>
         </section> -->
 
-        <section class="logo-qualites">
-            <div class="mt-4 justify-content-center row">
-                <div style="display: flex; justify-content: center;" class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
-                    <div style="width: 140px; height: 57px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;" class="mt-4 card rounded-circle">
+        <section style="padding-bottom: 4%; overflow-x: hidden;">
+
+            <div class="mt-4 row justify-content-center">
+
+                <div class="d-flex justify-content-center col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6 liste-qualites-effet-gauche" id="effet-scroll-liste-qualites">
+                    <div style="width: 140px; height: 60px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;" class="mt-4 card rounded-circle">
                         <div class="border-start border-bottom border-success border-3 card-body rounded-circle">
-                            <h5 class="text-nowrap d-flex justify-content-center" style="margin: auto; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Curieux</h5>
+                            <h5 class="text-nowrap d-flex justify-content-center qualites itim-regular"
+                            style="margin: auto; color: rgba(0, 0, 0, 0);" data-text="Curieux">Curieux</h5>
                         </div>
                     </div>
                 </div>
-                <div style="display: flex; justify-content: center;" class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
-                    <div style="width: 140px; height: 57px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;" class="mt-4 card rounded-circle">
+
+                <div class="d-flex justify-content-center col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6 liste-qualites-effet-gauche" id="effet-scroll-liste-qualites">
+                    <div style="width: 140px; height: 60px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;" class="mt-4 card rounded-circle">
                         <div class="border-start border-bottom border-success border-3 card-body rounded-circle">
-                            <h5 class="text-nowrap d-flex justify-content-center" style="margin: auto; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Investi</h5>
+                            <h5 class="text-nowrap d-flex justify-content-center qualites itim-regular"
+                            style="margin: auto; ; color: rgba(0, 0, 0, 0);" data-text="Investi">Investi</h5>
                         </div>
                     </div>
                 </div>
-                <div style="display: flex; justify-content: center;" class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
-                    <div style="width: 140px; height: 57px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;" class="mt-4 card rounded-circle">
+
+
+                <div class="d-flex justify-content-center col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6 liste-qualites-effet-droite" id="effet-scroll-liste-qualites">
+                    <div style="width: 140px; height: 60px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;" class="mt-4 card rounded-circle">
                         <div class="border-start border-bottom border-success border-3 card-body rounded-circle">
-                            <h5 class="text-nowrap d-flex justify-content-center" style="margin: auto; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Adaptable</h5>
+                            <h5 class="text-nowrap d-flex justify-content-center qualites itim-regular"
+                            style="margin: auto; color: rgba(0, 0, 0, 0);" data-text="Adaptable">Adaptable</h5>
                         </div>
                     </div>
                 </div>
-                <div style="display: flex; justify-content: center;" class="col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6">
-                    <div style="width: 140px; height: 57px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;" class="mt-4 card rounded-circle">
+
+                <div class="d-flex justify-content-center col-xxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-6 col-6 liste-qualites-effet-droite" id="effet-scroll-liste-qualites">
+                    <div style="width: 140px; height: 60px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;" class="mt-4 card rounded-circle">
                         <div class="border-start border-bottom border-success border-3 card-body rounded-circle">
-                            <h5 class="d-flex justify-content-center" style="margin: auto; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Autonome</h5>
+                            <h5 class="d-flex justify-content-center qualites itim-regular"
+                            style="margin: auto; color: rgba(0, 0, 0, 0);" data-text="Autonome">Autonome</h5>
                         </div>
                     </div>
                 </div>
             </div>
+
         </section>
 
-        <section style="padding-bottom: 3%;">
-            <div class="justify-content-center row">
-                <div style="display: flex; justify-content: center;" class="col-xxl-3 col-xl-3 col-lg-4 col-md-6 col-sm-8 col-8">
-                    <div style="width: 155px; height: 71px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;" class="mt-5 mb-4 card rounded-circle">
-                        <div class="border-start border-bottom border-primary border-3 card-body rounded-circle">
-                            <h6 class="d-flex justify-content-center" style="margin: auto;">
-                                <i class="fa-solid fa-car-side me-3 mt-2" style="color: rgb(23, 32, 42);">
-                                </i>
-                                <span style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Permis B Véhiculé</span>
-                            </h6>
+
+        <div class="effet-transition-haut" id="effet-scroll-presentation">
+        
+        <div class="d-flex justify-content-center" style="padding-bottom: 5%;">
+            <div style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;" class="mt-5 mb-4 card rounded-circle">
+                <div class="border-start border-bottom border-primary border-3 card-body rounded-circle">
+                    <h6 class="d-flex itim-regular mx-auto my-auto" style="width: 150px; height: 45px;" >
+                        <i class="ms-3 fa-solid fa-car-side fa-lg my-auto" style="color: rgb(23, 32, 42);">
+                        </i>
+                        <div class="d-flex justify-content-center align-items-center mx-auto">
+                            Permis B <br> Véhiculé
                         </div>
-                    </div>
+                        
+                    </h6>
                 </div>
             </div>
-        </section>
+        </div>
+        
 
-        <div style="padding-bottom: 6%;" class="justify-content-center row">
+        <!-- <div style="padding-bottom: 6%;" class="justify-content-center row">
             <div style="display: flex; justify-content: center;" class="col-xxl-4 col-xl-4 col-lg-5 col-md-5 col-sm-10 col-10">
-                <button class="btn btn-info button-resume-grow button-resume custom-btn-resume border-1 border-white" style="border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                <button class="btn btn-info button-resume-grow button-resume custom-btn-resume border-1 border-white"
+                 style="border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;"
+                 >
                     <a class="text-decoration-none" href="download/Fattouhy-Mohamed-CV.pdf"
-                    style="font-weight: bold; color: rgb(26, 35, 126); font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" target="_blank" download="newfilename">Télécharger mon CV (pdf)</a>
+                    style="font-weight: bold; color: rgb(26, 35, 126); font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"
+                    target="_blank" download="newfilename">Télécharger mon CV (pdf)</a>
                 </button>
             </div>
+        </div> -->
+
+            <div class="d-flex justify-content-center" style="padding-bottom: 8%;">
+
+                <button class="btn btn-info button-resume-grow button-resume custom-btn-resume border-1 border-white"
+                 style="border-radius: 10px; box-shadow: 0 0.3em 0 0 hsla(213, 46%, 64%, 0.5);">
+                
+                    <a class="text-decoration-none merriweather-regular" href="download/Fattouhy-Mohamed-CV.pdf"
+                    style="font-size: medium; font-weight: bold; color: rgb(26, 35, 126);"
+                    target="_blank" download="newfilename">Télécharger mon CV (pdf)</a>
+        
+                </button>
+            </div>
+
         </div>
 
 
@@ -245,17 +299,17 @@
 
         <section class="row justify-content-center"><hr class="col-10 margin-top-sm-2" style="border: 2px solid; width: 92%;"></section>
 
-        <div>
 
-            <div style="padding-bottom: 4%;" class="margin-top-sm-2">
+            <div style="padding-top: 2.5%; padding-bottom: 4%;" class="margin-top-sm-2 effet-titre-section" id="titre-section">
                 <h3 style="color: rgb(100, 181, 246); text-align: center; text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.7);">
                     <i class="bi bi-clipboard2-data-fill me-2" style="color: rgb(100, 181, 246);"></i>
                     <span>Compétences</span>
                 </h3>
             </div>
 
-            <div class="justify-content-center row margin-top-sm-1" style="padding-bottom: 2%;">
-                <div class="justify-content-center col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-10 col-10">
+            <div class="row justify-content-center margin-top-sm-1 effet-contenu-section" id="contenu-section" style="padding-bottom: 5%;">
+
+                <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-10 col-10">
                     <ul>
                         <li><strong style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">Programmation</strong> <span style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif">(niveau intermédiaire)</span>
                             <ul>
@@ -283,38 +337,94 @@
                 </div>
             </div>
 
-        </div>
 
         <section class="row justify-content-center"><hr class="col-10 margin-top-sm-2" style="border: 2px solid; width: 92%;"></section>
 
-        <div style="padding-bottom: 3%;" class="margin-top-sm-2">
+        <div style="padding-top: 2.5%; padding-bottom: 3%;" class="margin-top-sm-2 effet-titre-section" id="titre-section">
             <h3 style="color: rgb(100, 181, 246); text-align: center; text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.7);">
                 <i class="bi bi-book-half me-2" style="color: rgb(100, 181, 246);">
                 </i>Parcours étudiant
             </h3>
         </div>
 
-        <div style="padding-bottom: 1.5%; font-size: large;font-family:'Times New Roman', Times, serif" class="justify-content-center row">
+
+        <div style="padding-bottom: 1.5%; font-size: medium; flex-wrap: wrap;"
+        class="d-flex justify-content-center effet-contenu-section" id="contenu-section">
+            <div style="text-align: center; color: rgb(187, 222, 251); font-weight: bold;" class="margin-top-sm-2 me-2 merriweather-regular">
+                2021/2022
+            </div>
+            <div id="parcours-etudiant-1" style="width: auto;" class="margin-top-sm-1 ms-5 merriweather-regular">
+                    Master de Mathématiques de l'information et de la décision
+                    <br>
+                    Major de promotion
+                    <br>
+                    <i>Faculté des sciences - Montpellier, France</i>
+            </div>
+        </div>
+
+        <!-- Version bootstrap -->
+        <!-- <div style="padding-bottom: 1.5%; font-size: large;font-family:'Times New Roman', Times, serif;"
+        class="row justify-content-center effet-contenu-section" id="contenu-section">
             <div class="col-xxl-1 col-xl-1 col-lg-2 col-md-2 col-sm-12 col-12">
                 <div style="text-align: center; color: rgb(187, 222, 251); font-weight: bold;" class="margin-top-sm-1">
-                    <p>
                         2021/2022
-                    </p>
                 </div>
             </div>
             <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-7 col-10-custom-3">
-                <div>
+                    Master de Mathématiques de l'information et de la décision
+                    <br>
+                    Major de promotion
+                    <br>
+                    <i>Faculté des sciences - Montpellier, France</i>
+            </div>
+        </div> -->
+
+        <!-- Version flexbox -->
+        <!-- <div style="padding-bottom: 1.5%; font-size: large;font-family:'Times New Roman', Times, serif; flex-wrap: wrap; align-items: start; align-content: center; gap:20px"
+        class="d-flex justify-content-center effet-contenu-section" id="contenu-section">
+                <div style="text-align: center; color: rgb(187, 222, 251); font-weight: bold;" class="margin-top-sm-1">
+                        2021/2022
+                </div>
+
+                <div class="ms-3 me-3" style="width: 450px;">
                     Master de Mathématiques de l'information et de la décision
                     <br>
                     Major de promotion
                     <br>
                     <i>Faculté des sciences - Montpellier, France</i>
                 </div>
+        </div> -->
+
+        <!-- Version sans bootstrap (avec position)-->
+        <!-- <div style="padding-bottom: 8%; font-size: large;font-family:'Times New Roman', Times, serif; flex-wrap: wrap;"
+        class="justify-content-center d-flex">
+            <div style="text-align: center; color: rgb(187, 222, 251); font-weight: bold;">
+                    2021/2022
+            </div>
+                <div style="width: 500px; position: relative;" class="justify-content-center row margin-top-sm-1">
+                    <div style="position: absolute; left: 25px">
+                        Master de Mathématiques de l'information et de la décision <br>
+                        Major de promotion <br>
+                        <span style="font-style: italic;">Faculté des sciences - Montpellier, France</span>
+                    </div>
+                </div>
+        </div> -->
+
+
+        <div style="padding-bottom: 1.5%; font-size: medium; flex-wrap: wrap;"
+        class="d-flex justify-content-center effet-contenu-section" id="contenu-section">
+            <div style="text-align: center; color: rgb(187, 222, 251); font-weight: bold;" class="margin-top-sm-2 me-2 merriweather-regular">
+                2019/2020
+            </div>
+            <div id="parcours-etudiant-2" class="margin-top-sm-1 ms-5 merriweather-regular">
+                Licence de Mathématiques générales 
+                <br>
+                <i>Faculté des sciences - Montpellier, France</i>
             </div>
         </div>
 
-
-        <div style="padding-bottom: 1.5%; font-size: large; font-family:'Times New Roman', Times, serif" class="justify-content-center row">
+        <!-- <div style="padding-bottom: 1.5%; font-size: large; font-family:'Times New Roman', Times, serif" 
+        class="row justify-content-center effet-contenu-section" id="contenu-section">
             <div class="col-xxl-1 col-xl-1 col-lg-2 col-md-2 col-sm-12 col-12">
                 <div style="text-align: center; color: rgb(187, 222, 251); font-weight: bold" class="margin-top-sm-2">
                     <p>
@@ -329,12 +439,44 @@
                     <i>Faculté des sciences - Montpellier, France</i>
                 </div>
             </div>
+        </div> -->
+
+        <!-- <div style="padding-bottom: 1.5%; font-size: large;font-family:'Times New Roman', Times, serif; flex-wrap: wrap; align-items: start; align-content: center; gap:20px"
+        class="d-flex justify-content-center effet-contenu-section" id="contenu-section">
+                <div style="text-align: center; color: rgb(187, 222, 251); font-weight: bold;" class="margin-top-sm-1">
+                    2019/2020
+                </div>
+
+                <div class="ms-3 me-3" style="width: 450px;">
+                        Licence de Mathématiques générales 
+                        <br>
+                        <i>Faculté des sciences - Montpellier, France</i>
+                </div>
+        </div> -->
+
+
+
+        <div style="padding-bottom: 5%; font-size: medium; flex-wrap: wrap;"
+        class="d-flex justify-content-center effet-contenu-section" id="contenu-section">
+                <div style="text-align: center; color: rgb(187, 222, 251); font-weight: bold;" class="margin-top-sm-2 me-2 merriweather-regular">
+                    2016/2017
+                </div>
+            <div id="parcours-etudiant-3" class="margin-top-sm-1 ms-5 merriweather-regular">
+                Baccalauréat Economique et Sociale 
+                <br>
+                Spécialité Mathématiques
+                <br>
+                Titulaire avec mention Très Bien
+                <br>
+                <i>Lycée Alphonse Daudet - Nîmes, France</i>
+            </div>
         </div>
 
         
-        <div style="padding-bottom: 3%; font-size: large; font-family:'Times New Roman', Times, serif" class="justify-content-center row">
+        <!-- <div style="padding-bottom: 3%; font-size: large; font-family:'Times New Roman', Times, serif"
+        class="row justify-content-center effet-contenu-section" id="contenu-section"> -->
             <!-- <div class="d-flex flex-column align-items-center col-xxl-1 col-xl-1 col-lg-2 col-md-2 col-sm-10 col-10"> -->
-                <div class="col-xxl-1 col-xl-1 col-lg-2 col-md-2 col-sm-12 col-12">
+                <!-- <div class="col-xxl-1 col-xl-1 col-lg-2 col-md-2 col-sm-12 col-12">
                 <div style="text-align: center; color: rgb(187, 222, 251); font-weight: bold" class="margin-top-sm-2">
                     <p>
                         2016/2017
@@ -352,11 +494,32 @@
                     <i>Lycée Alphonse Daudet - Nîmes, France</i>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+        <!-- <div style="padding-bottom: 1.5%; font-size: large;font-family:'Times New Roman', Times, serif; flex-wrap: wrap; align-items: start; align-content: start; gap:20px"
+        class="d-flex justify-content-center effet-contenu-section" id="contenu-section">
+
+                <div style="text-align: center; color: rgb(187, 222, 251); font-weight: bold;" class="margin-top-sm-1 me-5">
+                    2016/2017
+                </div>
+
+                <div style="width: 450px;">
+                    Baccalauréat Economique et Sociale 
+                    <br>
+                    Spécialité Mathématiques
+                    <br>
+                    Titulaire avec mention Très Bien
+                    <br>
+                    <i>Lycée Alphonse Daudet - Nîmes, France</i>
+                </div>
+        </div> -->
+
+
 
         <section class="row justify-content-center"><hr class="col-10 margin-top-sm-2" style="border: 2px solid; width: 92%;"></section>
 
-        <div class="margin-top-sm-2" style="padding-bottom: 3%;">
+
+        <div class="margin-top-sm-2 effet-titre-section" id="titre-section" style="padding-top: 2.5%; padding-bottom: 3%;">
             <h3 style="color: rgb(100, 181, 246); text-align: center; text-shadow: 15px 15px 15px rgba(0, 0, 0, 0.7);">
                 <i class="bi bi-card-list me-2" style="color: rgb(100, 181, 246);">
                 </i>Centres d'intérêt
@@ -364,32 +527,38 @@
         </div>
 
 
-        <div style="font-size: large; font-family:'Times New Roman', Times, serif; padding-bottom: 1.5%;" class="justify-content-center row margin-top-sm-1">
+        <div style="font-size: large; font-family:'Times New Roman', Times, serif; padding-bottom: 1.5%;"
+        class="justify-content-center row margin-top-sm-1 effet-contenu-section" id="contenu-section">
             <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 custom-icon-position custom-icon-position-sm">
                 <i class="bi bi-film" style="color: rgb(141, 192, 233); font-size: 22px;"></i>
             </div>
-            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-10 col-10">
+            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-10 col-10 open-sans-regular">
                 Regarder des films (Thriller, Drame, Énigmatique).
             </div>
         </div>
-        <div style="font-size: large; font-family:'Times New Roman', Times, serif; padding-bottom: 1.5%;" class="justify-content-center row margin-top-sm-1">
+
+        <div style="font-size: large; font-family:'Times New Roman', Times, serif; padding-bottom: 1.5%;"
+        class="row justify-content-center margin-top-sm-1 effet-contenu-section" id="contenu-section">
             <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 custom-icon-position custom-icon-position-sm">
                 <i class="bi bi-stars" style="color: rgb(141, 192, 233); font-size: 22px;"></i>
             </div>
-            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-10 col-10">
+            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-10 col-10 open-sans-regular">
                 Lire à propos de l'Univers et ses mystères, suivre les découvertes en cosmologie et astronomie.
             </div>
         </div>
-        <div style="font-size: large; font-family:'Times New Roman', Times, serif; padding-bottom: 5%;" class="justify-content-center row margin-top-sm-1">
+
+        <div style="font-size: large; font-family:'Times New Roman', Times, serif; padding-bottom: 5%;"
+        class="row justify-content-center margin-top-sm-1 effet-contenu-section" id="contenu-section">
             <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 custom-icon-position custom-icon-position-sm">
                 <i class="bi bi-signpost-split" style="color: rgb(141, 192, 233); font-size: 22px;"></i>
             </div>
-            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-10 col-10">
+            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-10 col-10 open-sans-regular">
                 Marcher pour maintenir la forme physique et profiter des paysages.
             </div>
         </div>
-
+    
     </main>
+
 
     <footer class="footer border-top border-1 mt-4" style="background-color: #253c52; width: 100%;">
 
@@ -399,24 +568,42 @@
 
         <hr class="mt-0 col-6 offset-3">
         
-        <div class="row justify-content-center" style="padding-bottom: 2%;">
+        <div class="d-flex justify-content-center" style="padding-bottom: 30px; gap: 12vw;">
 
-            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 text-center margin-top-sm-1" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">
-                <span><i class="bi bi-mailbox" style="color: white; font-size: 20px;"></i>
+            <!-- <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 text-center margin-top-sm-1"
+              style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;"> -->
+            <div style="display: flex; flex-direction: column; width: 180px;">    
+
+                <span>
+                    <i class="bi bi-mailbox" style="color: rgb(105, 147, 221); font-size: 20px;"></i>
                     <div class="vr" style="visibility: hidden; padding-left: 5px;"></div> 
-                    Email personnel <br>
-                    <div style="color: rgb(76, 155, 232);">m.fattouhy@hotmail.com</div>
+                    Email personnel
                 </span>
+                    <a class="text-decoration-none link color-blue" style="cursor: pointer;" onclick="copyToClipboard()">m.fattouhy@hotmail.com</a>
+                    
+                    <!-- Élément pour le message de notification -->
+                    <span id="copyNotification" class="copy-notification">Copié</span>
+                    <!-- <div style="color: rgb(76, 155, 232);">m.fattouhy@hotmail.com</div> -->
             </div>
 
+            <div style="display: flex; flex-direction: column; width: 180px;">   
+                <span><i class="bi bi-linkedin" style="color: rgb(105, 147, 221); font-size: 20px;"></i>
+                    <div class="vr" style="visibility: hidden; padding-left: 5px;"></div>
+                    Linkedin
+                </span> 
+                <a class="text-decoration-none link color-blue" href="https://www.linkedin.com/in/mohamed-fattouhy-b0a22a264/" target="_blank">in/mohamed-fattouhy</a>            </div>
+            <!-- 
             <div class="col-xxl-3 col-xl-3  col-lg-3 col-md-6 col-sm-12 col-12 margin-top-sm-2 text-center" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: large;">
-                <span><i class="bi bi-linkedin" style="color: white; font-size: 20px;"></i>
+                <span><i class="bi bi-linkedin" style="color: rgb(105, 147, 221); font-size: 20px;"></i>
                     <div class="vr" style="visibility: hidden; padding-left: 5px;"></div>
                     Linkedin <br>
-                </span>
-                <a class="text-decoration-none" href="https://www.linkedin.com/in/mohamed-fattouhy-b0a22a264/" target="_blank">in/mohamed-fattouhy</a>
-            </div>
+                </span> -->
+                <!-- <a class="text-decoration-none link color-blue" href="https://www.linkedin.com/in/mohamed-fattouhy-b0a22a264/" target="_blank">in/mohamed-fattouhy</a> -->
+                <!-- <a class="text-decoration-none" href="https://www.linkedin.com/in/mohamed-fattouhy-b0a22a264/" target="_blank">in/mohamed-fattouhy</a> -->
+            <!-- </div> -->
+    
         </div>
+        
     </footer>
 
 </div>

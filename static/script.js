@@ -23,7 +23,6 @@ function isMobileDevice() {
 
 // Affichage conditionnel du popup
 function showPopup() {
-
     const popupDisplayed = sessionStorage.getItem("darkMode") === "true";
     return !popupDisplayed;
 }
@@ -31,6 +30,7 @@ function showPopup() {
 // Fonction pour afficher le pop-up pour inviter a l'utilisateur a desactiver le mode sombre
 // window.matchMedia('(prefers-color-scheme: dark)').matches 
 function checkDarkMode() {
+
     if (isMobileDevice() && showPopup()) {
 
         // Evite d'afficher la popup plusieurs fois dans la même session
@@ -45,6 +45,7 @@ function checkDarkMode() {
     }
 
 }
+
 
 // Vérification au chargement de la page
 document.addEventListener('DOMContentLoaded', function() {
@@ -69,10 +70,9 @@ function closePopup() {
         document.querySelectorAll(".popup-blur").forEach(element => {
             element.classList.add("blur-out");
         });
-
-        
     }
   }
+
 
 
 // Cette fonction permet de cacher la flèche de défilement du carousel pour la première et dernière slide 
@@ -118,9 +118,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
 // Gestion de la progression de la barre en fonction du scroll
 const main = document.querySelector('main'),
-  progressBar = document.querySelector('#progress');
+    progressBar = document.querySelector('#progress');
 
 document.addEventListener('scroll', () => {
 
@@ -142,4 +143,276 @@ document.addEventListener('scroll', () => {
   // MAJ du width de la barre de progression
   progressBar.style.width = pctScrolled + '%';
 
+});
+
+
+
+function copyToClipboard(event) {
+    const email = "m.fattouhy@hotmail.com";
+
+    // Copie l'email dans le presse-papiers
+    navigator.clipboard.writeText(email).then(() => {
+
+        // Affiche la notification "Copié !" près du curseur
+        const notification = document.getElementById("copyNotification");
+        notification.style.opacity = 1; // Rend le message visible
+        
+        // // Positionne la notification à côté du curseur
+        // notification.style.left = `${event.pageX + 150}px`;
+        // notification.style.top = `${event.pageY + 15}px`;
+
+        // Cache le message après 1 seconde
+        setTimeout(() => {
+            notification.style.opacity = 0;
+        }, 1000);
+
+    }).catch(err => {
+        console.error("Erreur de copie : ", err);
+    });
+}
+
+// Effet sur les items de la nav
+function animationItemNav() {
+
+    if (!sessionStorage.getItem('animationActivated')) {
+
+        // console.log("Animation non activée, ajout de la classe.");
+        
+        const effetElementItem1 = document.getElementById('item1');
+        const effetElementItem2 = document.getElementById('item2');
+        const effetElementItem3 = document.getElementById('item3');
+
+
+        effetElementItem1.style.color = 'rgba(0, 0, 0, 0.3)';
+        effetElementItem2.style.color = 'rgba(0, 0, 0, 0.3)';
+        effetElementItem3.style.color = 'rgba(0, 0, 0, 0.3)';
+
+        // Pause de 2000 millisecondes = 2 secondes
+        setTimeout(() => {}, 2000);
+
+        // Ajoute une classe pour activer l'effet
+        effetElementItem1.classList.add('effet-item-nav'); 
+        effetElementItem2.classList.add('effet-item-nav'); 
+        effetElementItem3.classList.add('effet-item-nav'); 
+
+        // Enregistre dans sessionStorage que l'animation a été activée
+        sessionStorage.setItem('animationActivated', 'true');
+
+        // Retire la classe et le style après une pause de 2 secondes
+        setTimeout(() => {
+            effetElementItem1.classList.remove('effet-item-nav');
+            effetElementItem2.classList.remove('effet-item-nav');
+            effetElementItem3.classList.remove('effet-item-nav');
+
+            effetElementItem1.style.removeProperty('color');
+            effetElementItem2.style.removeProperty('color');
+            effetElementItem3.style.removeProperty('color');
+        }, 2000);
+    }
+}
+
+// Vérification au chargement de la page
+document.addEventListener('DOMContentLoaded', function() {
+    animationItemNav();
+});
+
+
+// Crétion d'une instance de l'Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            
+            // Activé h5 lorsque celui-ci apparait à l'écran
+            entry.target.classList.add('h5'); 
+        }
+    });
+});
+
+// Sélectionner tous les éléments avec la classe 'qualites'
+const qualities = document.querySelectorAll(".qualites");
+
+// Observer chaque élément correspondant
+qualities.forEach(e => {
+    observer.observe(e);
+});
+
+
+
+// Ecartement non-linéaire du texte de présentation vers le haut en fonction du scroll
+document.addEventListener('scroll', () => {
+
+    // Récupération de la valeur de défilement vertical de la fenêtre
+    const scrolled = window.scrollY;
+
+
+    // Application de la transformation aux éléments avec les classes effet-vol
+    document.querySelectorAll('.effet-scroll-texte-1').forEach(element => {
+        element.style.transform = `translate3d(0, ${scrolled * -0.5}px, 0)`;
+    });
+    document.querySelectorAll('.effet-scroll-texte-2').forEach(element => {
+        element.style.transform = `translate3d(0, ${scrolled * -0.4}px, 0)`;
+    });
+    document.querySelectorAll('.effet-scroll-texte-3').forEach(element => {
+        element.style.transform = `translate3d(0, ${scrolled * -0.3}px, 0)`;
+    });
+    document.querySelectorAll('.effet-scroll-texte-4').forEach(element => {
+        element.style.transform = `translate3d(0, ${scrolled * -0.1}px, 0)`;
+    });
+
+});
+
+
+// Détecter l'entrée dans la page pour déclencher les effets
+
+// Crétion une instance de l'Intersection Observer
+const animationPresentation = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+        
+        // Vérifie si l'élément avec l'ID "effet-qualites" est visible
+        if (entry.isIntersecting) {
+
+            console.log(entry.isIntersecting)
+
+            // Si l'élément est visible, on sélectionne le texte à animer
+            const scrollText = entry.target;
+
+            // Ajouter la classe visible lorsque l'élément est dans le viewport
+            scrollText.style.opacity = 1;
+            scrollText.style.transform = 'translateY(0)';
+            
+        } else {
+
+            // Retirer la classe visible lorsque l'élément sort du viewport
+            const scrollText = entry.target;
+        }
+    });
+});
+
+// Sélectionner l'élément avec l'ID "effet-scroll-liste-qualites" à observer
+const presentationTexte = document.querySelectorAll("#effet-scroll-liste-qualites");
+
+
+// Observer chaque élément correspondant
+presentationTexte.forEach(e => {
+    animationPresentation.observe(e);
+});
+
+// Création une instance de l'Intersection Observer
+const animationPresentation2 = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+        
+        // Vérifie si l'élément avec l'ID "effet-qualites" est visible
+        if (entry.isIntersecting) {
+
+            console.log(entry.isIntersecting)
+
+            // Si l'élément est visible, on sélectionne le texte à animer
+            const scrollText = entry.target;
+
+            // Ajouter la classe visible lorsque l'élément est dans le viewport
+            scrollText.style.opacity = 1;
+            scrollText.style.transform = 'translateY(0)';
+            
+        } else {
+
+            // Retirer la classe visible lorsque l'élément sort du viewport
+            const scrollText = entry.target;
+        }
+    });
+});
+
+// Sélectionner l'élément avec l'ID "effet-scroll-presentation" à observer
+const presentationTexte2 = document.querySelectorAll("#effet-scroll-presentation");
+
+// Observer chaque élément correspondant
+presentationTexte2.forEach(e => {
+    animationPresentation2.observe(e);
+});
+
+
+// Création une instance de l'Intersection Observer
+const animationTiitreSection = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+        
+        // Vérifie si l'élément avec l'ID "titre-section" est visible
+        if (entry.isIntersecting) {
+
+            // Si l'élément est visible, on sélectionne le texte à animer
+            const scrollText = entry.target;
+
+            // Ajouter la classe visible lorsque l'élément est dans le viewport
+            scrollText.style.opacity = 1;
+            scrollText.style.transform = 'translateX(0)';
+            
+        }
+    });
+});
+
+// Sélectionner l'élément avec l'ID "titre-section" à observer
+const titreSection  = document.querySelectorAll("#titre-section");
+
+// Observer chaque élément correspondant
+titreSection.forEach(e => {
+    animationTiitreSection.observe(e);
+});
+
+
+// Crétion une instance de l'Intersection Observer
+const animationContenuSection = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+        // Vérifie si l'élément avec l'ID "competences" est visible
+        if (entry.isIntersecting) {
+
+            console.log(entry.isIntersecting)
+
+            // Si l'élément est visible, on sélectionne le texte à animer
+            const scrollText = entry.target;
+
+            // Ajouter la classe visible lorsque l'élément est dans le viewport
+            scrollText.style.opacity = 1;
+            scrollText.style.transform = 'translateX(0)';
+
+            const effetElementS = document.querySelectorAll('#competences-content span.effet-surlignage-span');
+
+            setTimeout(() => {
+                effetElementS.forEach((element) => {
+                    element.classList.add('effet-surlignage');
+                });
+            }, 300); 
+            
+        } else {
+
+            // Retirer la classe visible lorsque l'élément sort du viewport
+            const scrollText = entry.target;
+        }
+    });
+});
+
+// Sélectionner l'élément avec l'ID "contenu-section" à observer
+const contenuSection  = document.querySelectorAll("#contenu-section");
+
+// Observer chaque élément correspondant
+contenuSection.forEach(e => {
+    animationContenuSection.observe(e);
+});
+
+
+// Adaptation automatique du width pour les div de la section "parcours étudiant"
+window.addEventListener('load', function() {
+
+    // Sélectionne des divs de la section "parcours etudiant"
+    const parcoursEtudiantDiv1 = document.getElementById("parcours-etudiant-1");
+    const parcoursEtudiantDiv2 = document.getElementById("parcours-etudiant-2");
+    const parcoursEtudiantDiv3 = document.getElementById("parcours-etudiant-3");
+
+    // Obtiens la largeur de la première div
+    const parcoursEtudiantDiv1Widht = parcoursEtudiantDiv1.offsetWidth;
+
+    // Applique cette largeur aux deux autres div
+    parcoursEtudiantDiv2.style.width = parcoursEtudiantDiv1Widht + 'px';
+    parcoursEtudiantDiv3.style.width = parcoursEtudiantDiv1Widht + 'px';
 });

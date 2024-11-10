@@ -275,8 +275,6 @@ const animationPresentation = new IntersectionObserver((entries) => {
         // Vérifie si l'élément avec l'ID "effet-qualites" est visible
         if (entry.isIntersecting) {
 
-            console.log(entry.isIntersecting)
-
             // Si l'élément est visible, on sélectionne le texte à animer
             const scrollText = entry.target;
 
@@ -284,11 +282,13 @@ const animationPresentation = new IntersectionObserver((entries) => {
             scrollText.style.opacity = 1;
             scrollText.style.transform = 'translateY(0)';
             
-        } else {
+        } 
+        
+        // else {
 
             // Retirer la classe visible lorsque l'élément sort du viewport
-            const scrollText = entry.target;
-        }
+            // const scrollText = entry.target;
+        // }
     });
 });
 
@@ -318,10 +318,6 @@ const animationPresentation2 = new IntersectionObserver((entries) => {
             scrollText.style.opacity = 1;
             scrollText.style.transform = 'translateY(0)';
             
-        } else {
-
-            // Retirer la classe visible lorsque l'élément sort du viewport
-            const scrollText = entry.target;
         }
     });
 });
@@ -379,18 +375,14 @@ const animationContenuSection = new IntersectionObserver((entries) => {
             scrollText.style.opacity = 1;
             scrollText.style.transform = 'translateX(0)';
 
-            const effetElementS = document.querySelectorAll('#competences-content span.effet-surlignage-span');
+            // const effetElementS = document.querySelectorAll('#competences-content span.effet-surlignage-span');
 
-            setTimeout(() => {
-                effetElementS.forEach((element) => {
-                    element.classList.add('effet-surlignage');
-                });
-            }, 300); 
+            // setTimeout(() => {
+            //     effetElementS.forEach((element) => {
+            //         element.classList.add('effet-surlignage');
+            //     });
+            // }, 300); 
             
-        } else {
-
-            // Retirer la classe visible lorsque l'élément sort du viewport
-            const scrollText = entry.target;
         }
     });
 });
@@ -418,4 +410,29 @@ window.addEventListener('load', function() {
     // Applique cette largeur aux deux autres div
     parcoursEtudiantDiv2.style.width = parcoursEtudiantDiv1Widht + 'px';
     parcoursEtudiantDiv3.style.width = parcoursEtudiantDiv1Widht + 'px';
+});
+
+
+// Crétion d'une instance de l'Intersection Observer
+const carJobAnimation = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+
+            // On récuoere la classe ".card-job"
+            const scrollText = entry.target.querySelector('.card-job');
+
+            // On change le style de la classe
+            scrollText.style.opacity = 1;
+            scrollText.style.transform = 'rotateX(0deg)';
+
+        }
+    });
+});
+
+// Sélectionner tous les éléments avec l'id "Jobs"
+const cardJob = document.querySelectorAll("#Jobs");
+
+// Observer chaque élément correspondant
+cardJob.forEach(e => {
+    carJobAnimation.observe(e);
 });

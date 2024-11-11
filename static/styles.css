@@ -1,3 +1,18 @@
+/* Contenu principal */
+main{
+  background-image: radial-gradient(circle at 25%  120%,
+  #092339 15%,
+  #09233951 25%,
+  #0a375f4c 25%,
+  #0a375f77 50%,
+  #092c4a4c 50%,
+  #092c4a4c 75%,
+  #09233992 75%, 
+  #092339 100%); 
+  filter: grayscale(20%);
+  background-color: rgba(38, 75, 149, 0.2);
+}
+
 /* En-tête */
 header {
     color: #fff;
@@ -533,11 +548,19 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
   opacity: 0; 
 }
 
+.effet-transition-haut-1 {
+  transition: transform 0.7s ease-in-out, opacity 0.2s ease;
+  transform: translateY(300%);
+  opacity: 0;
+}
+
+
 .effet-transition-haut {
   transition: transform 0.7s ease-in-out, opacity 0.2s ease;
   transform: translateY(60%);
   opacity: 0;
 }
+
 
 
 /* Style des flèches du carousel */
@@ -616,6 +639,7 @@ a.link.small:before {
   height: 4px;
   /* background-color: rgba(224, 219, 63, 0.07); */
   background: rgb(105, 147, 221);
+  z-index: 1000;
 }
 a.link.small:hover:before {
   bottom: -3px;
@@ -796,15 +820,14 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
   color: #ffffff;
-  /* background-image: radial-gradient(circle, rgba(41, 11, 58, 0.8) 40%, rgba(41, 11, 58, 0.6) 60%, rgba(41, 11, 58, 0.4) 100%); */
-  /* background-image: radial-gradient(circle, rgb(4, 37, 57) 40%, rgb(9, 34, 48) 60%, rgba(3, 16, 24, 0.4) 100%); */
-  /* background-image: linear-gradient(0deg, rgb(4, 37, 57) 40%, rgb(9, 34, 48) 60%, rgba(3, 16, 24, 0.5) 100%); */
-  background-image: linear-gradient(0deg, rgb(2, 51, 82) 10%, rgb(3, 41, 64) 50%, rgba(2, 32, 53, 0.5) 100%);
+  background-image: linear-gradient(20deg, rgba(7, 47, 158, 0.7) 25%, rgba(4, 38, 130, 0.3) 50%, rgba(4, 40, 138, 0.1) 100%);
   transition: transform 4s ease, opacity 4s ease;
   transform: rotateX(-100deg);
   opacity: 0;
   filter: grayscale(30%); 
-  background-color: rgb(28, 25, 25);
+  background-color: rgb(28, 25, 25, 0.5);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Card pour la description de mes experiences */
@@ -813,6 +836,6 @@ body {
   border-radius: 15px;
   color: #ffffff;
   /* background-image: linear-gradient(20deg, rgba(60, 28, 149, 0.25), transparent 70%); */
-  background-image: linear-gradient(20deg, rgba(103, 28, 149, 0.6), transparent 80%); 
+  background-image: linear-gradient(20deg, rgba(103, 28, 149, 0.6), transparent 120%); 
   opacity: 1;
 }

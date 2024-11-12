@@ -426,6 +426,7 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
   /* background: radial-gradient(circle, rgb(2, 28, 50) 20%, rgb(9, 30, 47) 50%, rgba(7, 24, 41, 0.892) 100%); */
   background: radial-gradient(circle, rgb(8, 50, 85) 20%, rgb(7, 40, 65) 50%, rgba(7, 24, 41, 0.892) 100%);
   border: none;
+  box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -480,10 +481,11 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
 
 /* Card pour la présentation de mon parcours */
 .card-presentation {
-  box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.66);
+  box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.7);
   border-radius: 15px;
   color: #ffffff;
-  background-image: linear-gradient(20deg, rgba(149, 28, 58, 0.263), transparent 90%);
+  background-image: linear-gradient(20deg, rgba(149, 28, 58, 0.3), transparent 90%);
+  background-color: #0000003b;
   z-index: 1;
   opacity: 1;
 }
@@ -594,6 +596,7 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
   border-radius: 10px; 
   width: fit-content;
   margin: 0 auto; 
+  background-color: #00000029;
 }
 
 
@@ -836,6 +839,7 @@ body {
   border-radius: 15px;
   color: #ffffff;
   /* background-image: linear-gradient(20deg, rgba(60, 28, 149, 0.25), transparent 70%); */
-  background-image: linear-gradient(20deg, rgba(103, 28, 149, 0.6), transparent 120%); 
+  background-image: linear-gradient(20deg, rgba(103, 28, 149, 0.5), transparent 80%); 
   opacity: 1;
+  background-color: #00000041;
 }

@@ -436,3 +436,10 @@ const cardJob = document.querySelectorAll("#Jobs");
 cardJob.forEach(e => {
     carJobAnimation.observe(e);
 });
+
+
+// Arrêter l'animation typewriter après 3s
+setTimeout(() => {
+    const heading = document.querySelector('.typewriter h1');
+    heading.classList.add('typing-done');
+  }, 3000);

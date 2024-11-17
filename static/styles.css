@@ -5,11 +5,11 @@ main{
   #09233951 25%,
   #0a375f4c 25%,
   #0a375f77 50%,
-  #092c4a4c 50%,
+  #092c4a 50%,
   #092c4a4c 75%,
-  #09233992 75%, 
-  #092339 100%); 
-  filter: grayscale(20%);
+  #092339b2 75%, 
+  #09233900 100%); 
+  /* filter: grayscale(20%); */
   background-color: rgba(38, 75, 149, 0.2);
 }
 
@@ -51,6 +51,7 @@ header {
   font-weight: 400;
   font-style: normal;
 }
+
 
 /* Gestion du margin-top pour les écrans moyens (type tablette) */
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -424,9 +425,11 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
   padding: 0 auto;
   position: relative;
   /* background: radial-gradient(circle, rgb(2, 28, 50) 20%, rgb(9, 30, 47) 50%, rgba(7, 24, 41, 0.892) 100%); */
-  background: radial-gradient(circle, rgb(8, 50, 85) 20%, rgb(7, 40, 65) 50%, rgba(7, 24, 41, 0.892) 100%);
+  /* background: radial-gradient(circle, rgb(8, 50, 85) 20%, rgb(21, 49, 71) 50%, rgb(23, 51, 79) 100%); */
+  background: rgb(24, 60, 92);
   border: none;
-  box-shadow: 0 5px 30px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 30px -5px rgb(0, 0, 0, 1);
+  /* background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1), transparent 80%); */
 }
 
 
@@ -441,20 +444,21 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
 .card-header::after, .card-header::before{
   content: "";
   position: absolute;
-  height: calc(100% + 6px);
-  width: calc(100% + 6px);
+  height: calc(100% + 10px);
+  width: calc(100% + 10px);
   /* background: conic-gradient(from var(--angle), transparent 80%, rgb(184, 94, 226)); */
-  background: conic-gradient(from var(--angle), transparent 80%, rgb(94, 112, 226));
+  background: conic-gradient(from var(--angle), transparent 70%, rgb(63, 85, 226));
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
   border-radius: 20px;
+  box-shadow: 0 5px 30px -5px rgb(0, 0, 0);
   animation: 6s spin cubic-bezier(0.3, 0.4, 0.2, 1) forwards;
 }
 
 .card-header::before{
-  filter: blur(1rem);
+  filter: blur(2rem);
 }
 
 @keyframes spin {
@@ -563,6 +567,22 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
   opacity: 0;
 }
 
+
+/* Styles sur les markers des listes */
+li.programmation-liste::marker{
+  content: '🚀  ';
+  font-size: 1.5em;
+}
+
+li.langues-liste::marker{
+  content: '🗨️   ';
+  font-size: 1.5em;
+}
+
+li.suite-office-liste::marker{
+  content: '📊   ';
+  font-size: 1.5em;
+}
 
 
 /* Style des flèches du carousel */
@@ -824,7 +844,7 @@ body {
   padding-bottom: 10px;
   color: #ffffff;
   background-image: linear-gradient(20deg, rgba(7, 47, 158, 0.7) 25%, rgba(4, 38, 130, 0.3) 50%, rgba(4, 40, 138, 0.1) 100%);
-  transition: transform 4s ease, opacity 4s ease;
+  transition: transform 3s ease, opacity 3s ease;
   transform: rotateX(-100deg);
   opacity: 0;
   filter: grayscale(30%); 
@@ -843,3 +863,43 @@ body {
   opacity: 1;
   background-color: #00000041;
 }
+
+
+/* Typewriter effect */
+@media (min-width: 576px) {
+  .typewriter h1{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .1em solid white; /* The typwriter cursor */
+    white-space: nowrap ;
+    letter-spacing: .15em;
+    line-height: 90px;
+    animation: 
+      typing 2.5s steps(30, end),
+      blink-caret .5s step-end infinite;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from {width: 0}
+    to {width: 100%;}
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from {border-color: transparent;}
+    50% {border-color: white;}
+  }
+
+  /* Hide the cursor after the typing animation finishes */
+  .typewriter h1.typing-done {
+    animation: none; /* Stop all animations */
+    border-right: none; /* Hide the cursor */
+  }
+}
+
+@media (max-width: 575.92px) {
+  .typewriter h1{
+  letter-spacing: .2em;
+  }
+}
+

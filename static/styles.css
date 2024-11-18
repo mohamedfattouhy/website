@@ -52,6 +52,12 @@ header {
   font-style: normal;
 }
 
+.architects-daughter-medium {
+  font-family: "Architects Daughter", cursive;
+  font-weight: 500;
+  font-style: normal;
+}
+
 
 /* Gestion du margin-top pour les écrans moyens (type tablette) */
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -428,7 +434,7 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
   /* background: radial-gradient(circle, rgb(8, 50, 85) 20%, rgb(21, 49, 71) 50%, rgb(23, 51, 79) 100%); */
   background: rgb(24, 60, 92);
   border: none;
-  box-shadow: 0 5px 30px -5px rgb(0, 0, 0, 1);
+  /* box-shadow: 0 5px 30px -5px rgb(0, 0, 0, 1); */
   /* background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.1), transparent 80%); */
 }
 
@@ -444,16 +450,16 @@ background: linear-gradient(90deg, rgb(137, 63, 235) 20%, rgb(68, 221, 241) 50%,
 .card-header::after, .card-header::before{
   content: "";
   position: absolute;
-  height: calc(100% + 10px);
-  width: calc(100% + 10px);
+  height: calc(100% + 8px);
+  width: calc(100% + 8px);
   /* background: conic-gradient(from var(--angle), transparent 80%, rgb(184, 94, 226)); */
-  background: conic-gradient(from var(--angle), transparent 70%, rgb(63, 85, 226));
+  background: conic-gradient(from var(--angle), transparent 70%, rgb(38, 65, 242));
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
   border-radius: 20px;
-  box-shadow: 0 5px 30px -5px rgb(0, 0, 0);
+  /* box-shadow: 0 5px 30px -5px rgb(0, 0, 0); */
   animation: 6s spin cubic-bezier(0.3, 0.4, 0.2, 1) forwards;
 }
 
@@ -844,7 +850,7 @@ body {
   padding-bottom: 10px;
   color: #ffffff;
   background-image: linear-gradient(20deg, rgba(7, 47, 158, 0.7) 25%, rgba(4, 38, 130, 0.3) 50%, rgba(4, 40, 138, 0.1) 100%);
-  transition: transform 3s ease, opacity 3s ease;
+  transition: transform 2s ease, opacity 2s ease;
   transform: rotateX(-100deg);
   opacity: 0;
   filter: grayscale(30%); 
@@ -874,7 +880,7 @@ body {
     letter-spacing: .15em;
     line-height: 90px;
     animation: 
-      typing 2.5s steps(30, end),
+      typing 2s steps(30, end),
       blink-caret .5s step-end infinite;
   }
 
